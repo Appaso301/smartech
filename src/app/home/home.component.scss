@@ -1,104 +1,115 @@
-.banner-card{
-    position: relative;
-}
-.banner-card img{
-    max-width: 100%;
-    height:auto;
-}
-.banner-text{
-    position: absolute;
-    top: 10%;
-    color: #fff;
-    padding: 30px;
-    letter-spacing: 2px;
-}
-.highlight-text{
-    color:black;
-}
-.banner-text h2{
-    font-size:30px;
-    margin-bottom: 8px;
-}
-.banner-text p{
-    text-shadow: 2px 1px black;
-    font-family: 'Times New Roman', Times, serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.banner-text .cn{
-    width: 120px;
-    height: 40px;
-    background: rgb(206, 204, 204);
-    border: none;
-    margin-bottom: 10px;
-    margin-left: 10px;
-    margin-top: 15px;
-    font-size: 15px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: .2s ease;
-    font-family: 'Times New Roman', Times, serif;
-
-}
-.banner-text .cn a{
-    text-decoration: none;
-    color: black;
-    transition: .2s ease;
-    font-weight: bold;
-}
-.banner-text .cn:hover{
-    background-color: rgb(222, 222, 70);
-    color: black;
+html,
+body {
+  height: 100%;
+  font-family: "Times New Roman", Times, serif;
 }
 
-.wcu{
-    position: absolute;
-    top: 40%;
-    color: #fff;
-    padding: 30px;
-    letter-spacing: 2px;
-    right:0%;
+.banner-card {
+  position: relative;
 }
 
-.wcu h2{
-    font-size:30px;
-    margin-bottom: 8px;
-    color: black;
-    text-shadow: 2px 1px whitesmoke;
-}
-.wcu ul{
-    text-shadow: 2px 1px black;
-    font-family: 'Times New Roman', Times, serif;
-}
-.wcu ul{
-    color: white;
-}
-.wcu ul li::marker{
-    color: black;
+.banner-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0;
+  object-fit: cover;
 }
 
-.wcu .rm{
-    width: 160px;
-    height: 40px;
-    background: rgb(191, 189, 189);
-    border: none;
-    margin-bottom: 10px;
-    margin-left: 10px;
-    margin-top: 15px;
-    font-size: 15px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: .2s ease;
-    font-family: 'Times New Roman', Times, serif;
+.banner-text {
+  position: absolute;
+  top: 10%;
+  color: #fff;
+  padding: 30px;
+  letter-spacing: 2px;
+}
 
+.highlight-text {
+  color: black;
 }
-.wcu .rm a{
-    text-decoration: none;
-    color: black;
-    transition: .2s ease;
-    font-weight: bold;
+
+.banner-text h2 {
+  font-size: 30px;
+  margin-bottom: 8px;
 }
-.wcu .rm:hover{
-    background-color: rgb(222, 222, 70);
-    color: black;
-    border: black 2px;
+
+.banner-text p {
+  text-shadow: 2px 1px black;
+}
+
+.banner-text .cn {
+  width: 120px;
+  height: 40px;
+  background: rgb(206, 204, 204);
+  border: none;
+  margin-top: 15px;
+  font-size: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.banner-text .cn a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.banner-text .cn:hover {
+  background-color: rgb(222, 222, 70);
+}
+
+.wcu {
+  position: absolute;
+  top: 40%;
+  right: 0%;
+  color: #fff;
+  padding: 30px;
+  letter-spacing: 2px;
+}
+
+.wcu h2 {
+  font-size: 30px;
+  margin-bottom: 8px;
+  color: black;
+  text-shadow: 2px 1px whitesmoke;
+}
+
+.wcu ul {
+  text-shadow: 2px 1px black;
+  color: white;
+  list-style-position: inside;
+}
+
+.wcu ul li::marker {
+  color: black;
+}
+
+.wcu .rm {
+  width: 160px;
+  height: 40px;
+  background: rgb(191, 189, 189);
+  border: none;
+  margin-top: 15px;
+  font-size: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.wcu .rm a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.wcu .rm:hover {
+  background-color: rgb(222, 222, 70);
+  border: 2px solid black;
 }
