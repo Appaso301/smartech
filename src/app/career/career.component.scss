@@ -1,29 +1,35 @@
 * {
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
-      margin: 0;
-      padding: 0;
-      color: #333;
-    }
-
-    .career-section {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 30px 40px;
-      background-color: #ffffff;
-      border: 2px solid #ddd;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    background-color: #ffe4dc;
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+.career-section {
+  max-width: 1500px;
+  padding: 30px 40px;
+  background-color: #ffe4dc;
+}
 
     .career-section h1 {
-      color: #1a73e8;
+      color: #e37c06;
       font-size: 32px;
       margin-bottom: 20px;
+      text-align: center;
+    }
+    .career-section .title{
+    font-size: 13px;
+    letter-spacing: 1px;
+    font-weight: 800;
+    padding: 8px 20px;
+    margin: 0;
+    background: #e7f1fd;
+    display: inline-block;
+    text-transform: uppercase;
+    border-radius: 50px;
+    color: #e37c06;
+    text-align: center;
     }
 
     .career-section p {
@@ -51,7 +57,7 @@
     .form-section h2 {
       font-size: 24px;
       margin-bottom: 10px;
-      color: #1a73e8;
+      color: #e37c06;
     }
 
     form {
@@ -81,7 +87,7 @@
       padding: 12px 20px;
       font-size: 16px;
       color: #fff;
-      background-color: #1a73e8;
+      background-color: #e37c06;
       border: none;
       border-radius: 6px;
       cursor: pointer;
@@ -89,11 +95,11 @@
     }
 
     button:hover {
-      background-color: #155ab6;
+      background-color: #e37c06;
     }
 
     a {
-      color: #1a73e8;
+      color: #e37c06;
       text-decoration: none;
     }
 
