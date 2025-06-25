@@ -1,17 +1,30 @@
 <div class="navbar">
   <div class="navbar-container">
     <div class="navbar-logo">
-      <img src="logo new.png" alt="" />
+      <img src="logo new.png" alt="Logo" />
     </div>
-    <div class="navbar-container">
-      <div class="nav-links">
-        <a routerLink="/home">Home</a>
-        <a routerLink="/about">About</a>
-        <a routerLink="/services">Services</a>
-        <a routerLink="/products">Portfolio </a>
-        <a routerLink="/products">Career </a>
-        <a routerLink="/contact">Contact</a>
-      </div>
+
+    <div class="menu-icon" (click)="toggleMenu()">&#9776;</div>
+
+    <div class="nav-links" [ngClass]="{ show: menuOpen }">
+      <a routerLink="/home" routerLinkActive="active" (click)="closeMenu()"
+        >Home</a
+      >
+      <a routerLink="/about" routerLinkActive="active" (click)="closeMenu()"
+        >About</a
+      >
+      <a routerLink="/services" routerLinkActive="active" (click)="closeMenu()"
+        >Services</a
+      >
+      <a routerLink="/products" routerLinkActive="active" (click)="closeMenu()"
+        >Portfolio</a
+      >
+      <a routerLink="/career" routerLinkActive="active" (click)="closeMenu()"
+        >Career</a
+      >
+      <a routerLink="/contact" routerLinkActive="active" (click)="closeMenu()"
+        >Contact</a
+      >
     </div>
   </div>
 </div>
