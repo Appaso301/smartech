@@ -1,0 +1,105 @@
+.contact-back {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    background-color: #fee3d9;
+    padding: 20px;
+}
+.contact-back h3{
+    font-family: 'Arial Black', Gadegt, sans-serif;
+    font-size: 13px;
+    letter-spacing: 1px;
+    padding: 8px 20px;
+    margin: 0;
+    background: #e7f1fd;
+    display: inline-block;
+    text-transform: uppercase;
+    border-radius: 50px;
+    color: red;
+}
+.contactus{
+    padding: 0px;
+    font-size: 36px;
+    color: red;
+}
+.flexbox{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 15px;
+}
+.address{
+    width: 40%;
+    height: auto;
+    margin-left: 35px;
+    background-color: white;
+}
+.location{
+    margin-top: 10px;
+}
+.address h2{
+    padding: 10px;
+}
+.address p{
+    padding-bottom: 10px;
+}
+.email{
+    width: 20%;
+    height: auto;
+    background-color: white;
+    padding-top: 15px;
+}
+.email h2{
+    padding: 10px;
+}
+.call{
+    width: 20%;
+    height: auto;
+    background-color: white;
+    padding-top: 15px;
+}
+.call h2{
+    padding: 10px;
+}
+.inputform{
+    margin-top: 28px;
+    margin-left: 30px;
+    width: 50%;
+    height: auto;
+    background-color: white;
+}
+form {
+    display: flex;
+    gap: 0px;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+}
+
+input[type="text"], input[type="email"] {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
