@@ -4,7 +4,9 @@
       <img src="logo new.png" alt="Logo" />
     </div>
 
-    <div class="menu-icon" (click)="toggleMenu()">&#9776;</div>
+    <div class="menu-icon" (click)="toggleMenu()">
+      {{ menuOpen ? "✖" : "☰" }}
+    </div>
 
     <div class="nav-links" [ngClass]="{ show: menuOpen }">
       <a routerLink="/home" routerLinkActive="active" (click)="closeMenu()"

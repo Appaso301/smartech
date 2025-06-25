@@ -9,13 +9,13 @@ import { FormsModule, NgModel } from '@angular/forms';
   styleUrl: './navbar.component.scss',
 })
 export class NavbarComponent {
-  menuOpen: boolean = false;
+  menuOpen = false;
 
-  toggleMenu(): void {
+  toggleMenu() {
     this.menuOpen = !this.menuOpen;
   }
 
-  closeMenu(): void {
+  closeMenu() {
     this.menuOpen = false;
   }
 }
