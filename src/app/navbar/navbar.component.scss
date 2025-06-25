@@ -1,8 +1,8 @@
 .navbar {
   position: sticky !important;
-  width: 100%;
   top: 0;
   z-index: 1000;
+  width: 100%;
   background-color: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
 }
@@ -55,29 +55,58 @@
   color: orange;
 }
 
-/* === Menu Icon === */
+/* Toggle icon */
 .menu-icon {
   display: none;
   font-size: 28px;
   cursor: pointer;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
 }
 
-/* === Responsive Styling === */
+/* Responsive (Mobile) */
 @media (max-width: 768px) {
   .nav-links {
     display: none;
     flex-direction: column;
-    background-color: white;
     position: absolute;
     top: 70px;
     right: 3rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 1rem;
+    padding: 7rem; /* ✅ Changed from 7rem to 1rem */
     z-index: 999;
+    border-radius: 6px;
+    background-color: white;
+  }
+
+  /* Each link */
+  .nav-links a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+
+  /* ✅ Hover background only on the link */
+  .nav-links a:hover {
+    background-color: orange;
+    color: white;
   }
 
   .nav-links.show {
     display: flex;
+  }
+
+  .nav-links a {
+    color: orange;
+    padding: 8px 0;
+  }
+
+  .nav-links a:hover {
+    text-decoration: underline;
   }
 
   .menu-icon {

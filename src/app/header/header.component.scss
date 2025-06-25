@@ -17,7 +17,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: nowrap; 
+  flex-wrap: nowrap;
   width: 100%;
   padding: 0 1rem;
   box-sizing: border-box;
@@ -58,9 +58,10 @@ body {
   transform: scale(1.05);
 }
 
-@media (max-width: 740px) {
+@media (max-width: 800px) {
   .header-container {
     flex-wrap: nowrap;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
     padding: 0 !important;

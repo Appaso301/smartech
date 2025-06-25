@@ -1,142 +1,176 @@
-* {
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-    background-color: #ffe4dc;
-    margin: 0;
-    padding: 0;
-    color: #333;
-  }
-.career-section {
-  max-width: 1500px;
-  padding: 30px 40px;
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
   background-color: #ffe4dc;
 }
 
-    .career-section h1 {
-      color: #e37c06;
-      font-size: 32px;
-      margin-bottom: 20px;
-      text-align: center;
-    }
-    .career-section .title{
-    font-size: 13px;
-    letter-spacing: 1px;
-    font-weight: 800;
-    padding: 8px 20px;
-    margin: 0;
-    background: #e7f1fd;
-    display: inline-block;
-    text-transform: uppercase;
-    border-radius: 50px;
-    color: #e37c06;
-    text-align: center;
-    }
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
 
-    .career-section p {
-      font-size: 16px;
-      line-height: 1.6;
-    }
+.career-section {
+  max-width: 100%;
+  padding: 30px 20px;
+  margin: auto;
+  background-color: #ffe4dc;
+}
 
-    .roles {
-      margin-top: 30px;
-    }
+.career-section .title {
+  font-size: 13px;
+  letter-spacing: 1px;
+  font-weight: 800;
+  padding: 8px 20px;
+  background: #e7f1fd;
+  display: inline-block;
+  text-transform: uppercase;
+  border-radius: 50px;
+  color: #e37c06;
+  text-align: center;
+  margin-bottom: 20px;
+}
 
-    .role {
-      margin-bottom: 20px;
-    }
+.career-section h1 {
+  color: #e37c06;
+  font-size: 32px;
+  text-align: center;
+  margin: 10px 0 20px 0;
+}
 
-    .role h3 {
-      color: #333;
-      margin-bottom: 5px;
-    }
+.career-section p {
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: center;
+  margin-bottom: 20px;
+}
 
-    .form-section {
-      margin-top: 40px;
-    }
+.roles {
+  margin-top: 30px;
+}
 
-    .form-section h2 {
-      font-size: 24px;
-      margin-bottom: 10px;
-      color: #e37c06;
-    }
+.role {
+  margin-bottom: 25px;
+}
 
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
+.role h3 {
+  font-size: 20px;
+  color: #e37c06;
+  margin-bottom: 8px;
+  text-align: center;
+}
 
-    label {
-      font-weight: bold;
-    }
+.role p {
+  text-align: center;
+  padding: 0 10px;
+}
 
-    input, textarea {
-      padding: 10px;
-      font-size: 15px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      width: 100%;
-    }
+.form-section {
+  margin-top: 40px;
+}
 
-    textarea {
-      height: 100px;
-      resize: vertical;
-    }
+.form-section h2 {
+  font-size: 24px;
+  text-align: center;
+  color: #e37c06;
+  margin-bottom: 10px;
+}
 
-    button {
-      padding: 12px 20px;
-      font-size: 16px;
-      color: #fff;
-      background-color: #e37c06;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
+.form-section p {
+  text-align: center;
+  margin-bottom: 15px;
+}
 
-    button:hover {
-      background-color: #e37c06;
-    }
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 600px;
+  margin: auto;
+}
 
-    a {
-      color: #e37c06;
-      text-decoration: none;
-    }
+label {
+  font-weight: bold;
+}
 
-    a:hover {
-      text-decoration: underline;
-    }
+input,
+textarea {
+  padding: 10px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+}
 
-    /* Responsive Design */
-    @media (max-width: 768px) {
-      .career-section {
-        padding: 20px;
-        margin: 20px;
-      }
+textarea {
+  height: 100px;
+  resize: vertical;
+}
 
-      .career-section h1 {
-        font-size: 26px;
-      }
+button {
+  padding: 12px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #e37c06;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
 
-      .form-section h2 {
-        font-size: 20px;
-      }
-    }
+button:hover {
+  background-color: #cf6b00;
+}
 
-    @media (max-width: 480px) {
-      .career-section h1 {
-        font-size: 22px;
-      }
+a {
+  color: #e37c06;
+  text-decoration: none;
+}
 
-      .career-section p, .role p, form label {
-        font-size: 14px;
-      }
+a:hover {
+  text-decoration: underline;
+}
+@media (max-width: 768px) {
+  .career-section {
+    padding: 20px 10px;
+  }
 
-      input, textarea {
-        font-size: 14px;
-      }
+  .career-section h1 {
+    font-size: 26px;
+  }
 
-      button {
-        font-size: 14px;
-      }
-    }
+  .form-section h2 {
+    font-size: 20px;
+  }
+
+  form {
+    width: 100%;
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .career-section h1 {
+    font-size: 22px;
+  }
+
+  .career-section p,
+  .role p,
+  form label {
+    font-size: 14px;
+  }
+
+  input,
+  textarea {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 14px;
+  }
+}
