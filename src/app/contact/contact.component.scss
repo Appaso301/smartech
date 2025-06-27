@@ -1,105 +1,208 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f4f8;
+  color: #333;
+}
+
 .contact-back {
-    width: 100%;
-    height: auto;
-    text-align: center;
-    background-color: #fee3d9;
-    padding: 20px;
+  width: 100%;
+  padding: 3rem 1rem;
+  background: linear-gradient(to bottom, #e7f1fd, #f5faff);
+  text-align: center;
 }
-.contact-back h3{
-    font-family: 'Arial Black', Gadegt, sans-serif;
-    font-size: 13px;
-    letter-spacing: 1px;
-    padding: 8px 20px;
-    margin: 0;
-    background: #e7f1fd;
-    display: inline-block;
-    text-transform: uppercase;
-    border-radius: 50px;
-    color: red;
+
+/* Title badge */
+.title {
+  font-size: 13px;
+  letter-spacing: 1px;
+  font-weight: 800;
+  padding: 8px 20px;
+  background: white;
+  display: inline-block;
+  text-transform: uppercase;
+  border-radius: 50px;
+  color: #ffcc00;
 }
-.contactus{
-    padding: 0px;
-    font-size: 36px;
-    color: red;
+
+.contact-back h3 {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: inline-block;
+  padding: 8px 20px;
+  background-color: #fff;
+  color: #ffcc00;
+  border-radius: 50px;
+  margin-bottom: 1rem;
 }
-.flexbox{
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-    margin-top: 15px;
+
+.contactus {
+  font-size: 36px;
+  color: #ffcc00;
+  margin-bottom: 2rem;
 }
-.address{
-    width: 40%;
-    height: auto;
-    margin-left: 35px;
-    background-color: white;
+
+/* Contact Info Tiles */
+.flexbox-1 {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 3rem;
 }
-.location{
-    margin-top: 10px;
+
+.address,
+.email,
+.call {
+  background-color: white;
+  border-radius: 16px;
+  padding: 1.5rem;
+  width: 30%;
+  min-width: 260px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #e0e0e0;
+  position: relative;
+  overflow: hidden;
 }
-.address h2{
-    padding: 10px;
+
+.address::before,
+.email::before,
+.call::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at top left, #fffbe6, transparent 70%);
+  z-index: 0;
+  opacity: 0.3;
 }
-.address p{
-    padding-bottom: 10px;
+
+.address:hover,
+.email:hover,
+.call:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 0 20px rgba(255, 204, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.1);
+  border-color: #ffd70066;
+  cursor: pointer;
 }
-.email{
-    width: 20%;
-    height: auto;
-    background-color: white;
-    padding-top: 15px;
+
+.address img,
+.email img,
+.call img {
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
 }
-.email h2{
-    padding: 10px;
+
+.address:hover img,
+.email:hover img,
+.call:hover img {
+  transform: scale(1.1) rotate(3deg);
 }
-.call{
-    width: 20%;
-    height: auto;
-    background-color: white;
-    padding-top: 15px;
+
+.address h2,
+.email h2,
+.call h2 {
+  font-size: 1.2rem;
+  color: #ffcc00;
+  margin-bottom: 0.5rem;
 }
-.call h2{
-    padding: 10px;
+
+.address p,
+.email p,
+.call p {
+  font-size: 0.95rem;
+  color: #555;
 }
-.inputform{
-    margin-top: 28px;
-    margin-left: 30px;
-    width: 50%;
-    height: auto;
-    background-color: white;
+
+/* Form Section */
+.inputform {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem;
 }
-form {
-    display: flex;
-    gap: 0px;
+
+.contact-form {
+  width: 100%;
+  max-width: 600px;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  background-color: #ffcc00;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #e6b800;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .flexbox-1 {
     flex-direction: column;
     align-items: center;
-    padding: 20px;
-    background-color: #f7f7f7;
-    border: 1px solid #ddd;
-}
+  }
 
-input[type="text"], input[type="email"] {
+  .address,
+  .email,
+  .call {
     width: 100%;
-    height: 40px;
-    margin-bottom: 20px;
-    padding: 10px;
-    border: 1px solid #ccc;
+  }
+
+  .contactus {
+    font-size: 28px;
+  }
 }
 
-textarea {
-    width: 100%;
-    height: 100px;
-    margin-bottom: 20px;
-    padding: 10px;
-    border: 1px solid #ccc;
-}
+@media (max-width: 480px) {
+  .contact-back h3 {
+    font-size: 12px;
+    padding: 6px 15px;
+  }
 
-button[type="submit"] {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
+  .contactus {
+    font-size: 24px;
+  }
+
+  .contact-form {
+    padding: 1.5rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.9rem;
+  }
+
+  .contact-form button {
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+  }
 }

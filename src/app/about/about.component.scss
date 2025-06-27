@@ -10,29 +10,32 @@
 .section {
   width: 100%;
   min-height: 130vh;
-  background-color: #fee3d9;
+  background-color: #f0f4f8;
   padding-top: 25px;
   position: relative;
 }
-
-.title {
-  text-align: center;
-}
-
 .title h3 {
   font-size: 13px;
   letter-spacing: 1px;
   font-weight: 800;
   padding: 8px 20px;
-  background: #e7f1fd;
+  background: white;
   display: inline-block;
   text-transform: uppercase;
   border-radius: 50px;
-  color: red;
+  color: #ffcc00;
+  margin-bottom: 1rem;
+  margin-left: 47%;
+}
+
+.title h1 {
+  font-size: 36px;
+  color: #ffcc00;
+  margin-left: 37%;
 }
 
 .title h1 span {
-  color: red;
+  color: #333;
 }
 
 .container {
