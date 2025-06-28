@@ -1,0 +1,30 @@
+<section id="portfolio">
+  <h5>PORTFOLIO</h5>
+  <h2>Check our <strong class="portfolio-strong">Portfolio</strong></h2>
+
+  <ul class="portfolio-filter">
+    <li *ngFor="let filter of filters" 
+        [class.active]="selectedFilter === filter"
+        (click)="selectedFilter = filter">
+      {{ filter === 'all' ? 'All' : filter | titlecase }}
+    </li>
+  </ul>
+
+  <div class="portfolio-gallery">
+    <div class="portfolio-item" 
+         *ngFor="let item of filterItems()"
+        (click)="openPopup(item.id)">
+      <img [src]="item.src" [alt]="item.alt" />
+      <div class="image-title">{{ item.title }}</div>
+    </div>
+  </div>
+
+  <!-- this is the popup code-->
+  <div class="popup" *ngIf="currentPopupId !== null" (click)="closePopup()">
+    <div class="popup-content" (click)="$event.stopPropagation()">
+      <button class="close-btn" (click)="closePopup()">×</button>
+      <img *ngIf="currentItem" [src]="currentItem.src" [alt]="currentItem.alt">
+      <p *ngIf="currentItem">{{ currentItem.title }}</p>
+    </div>
+  </div>
+</section>

@@ -1,57 +1,38 @@
-<div>
-  <div>
-    <div class="contact-back">
-      <h3 class="title">contact</h3>
-      <div class="flexbox"></div>
-      <h2 class="contactus">Contact Us</h2>
+        <div class="contact fade-up" style="animation-delay: 0s;">
+  <div class="contact-container fade-up" style="animation-delay: 0.1s;">
+    <div class="contact-header fade-up" style="animation-delay: 0.2s;">
+      <span class="contact-tag fade-up" style="animation-delay: 0.3s;">CONTACT</span>
+      <h2 class="contact-title fade-up" style="animation-delay: 0.4s;">Contact Us</h2>
+    </div>
 
-      <div class="flexbox-1">
-        <div class="address">
-          <img
-            src="location.png"
-            alt="smartlocation"
-            width="50px"
-            height="50px"
-            class="location"
-          />
-          <h2>Our Address</h2>
-          <p>
-            Flat No C2 47, Kendriya Vihar, Moshi Pradhikaran, Sector No 4, Pune,
-            Maharashtra 412105, India
-          </p>
-        </div>
-        <div class="email">
-          <img
-            src="email.png"
-            alt="smartemail"
-            width="50px"
-            height="50px"
-            class="emailaddress"
-          />
-          <h2>Email Us</h2>
-          <p>smarttechengineering.ofc&#64;gmail.com</p>
-        </div>
-        <div class="call">
-          <img
-            src="call.png"
-            alt="smartcall"
-            width="50px"
-            height="50px"
-            class="callus"
-          />
-          <h2>Call Us</h2>
-          <p>+91 9552530532</p>
-        </div>
+    <div class="contact-cards fade-up" style="animation-delay: 0.5s;">
+      <div class="card address-card" (click)="onAddressClick()">
+        <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+        <h3>Our Address</h3>
+        <p>Flat No C2 47 , Kendriya Vihar , Moshi Pradhikaran , Sector No 4 ,<br />Pune , Maharashtra - 412105 , India</p>
       </div>
-      <div class="inputform">
-        <form class="contact-form">
-          <input type="text" placeholder="Your Name" />
-          <input type="email" placeholder="Your Email" />
-          <input type="text" placeholder="Subject" />
-          <textarea placeholder="Message"></textarea>
-          <button type="submit">Send Message</button>
-        </form>
+
+      <div class="card">
+        <div class="icon"><i class="fas fa-envelope"></i></div>
+        <h3>Email Us</h3>
+        <p>smarttechengineering.ofc&#64;gmail.com</p>
+      </div>
+      
+      <div class="card">
+        <div class="icon"><i class="fas fa-phone-alt flipped-icon"></i></div>
+        <h3>Call Us</h3>
+        <p>+91 9552530532</p>
       </div>
     </div>
+
+    <form class="contact-form fade-up" style="animation-delay: 0.6s;">
+      <div class="row">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+      </div>
+      <input type="text" placeholder="Subject" required />
+      <textarea placeholder="Message"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
   </div>
 </div>

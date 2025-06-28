@@ -8,10 +8,11 @@ import { CareerComponent } from "./career/career.component";
 import { ContactComponent } from "./contact/contact.component";
 import { ServicesComponent } from "./services/services.component";
 import { FooterComponent } from "./footer/footer.component";
+import { PortfolioComponent } from "./portfolio/portfolio.component";
 
 @Component({
   selector: "app-root",
-  imports: [RouterOutlet, HeaderComponent, HomeComponent, NavbarComponent, AboutComponent, CareerComponent, ContactComponent, ServicesComponent, FooterComponent],
+  imports: [RouterOutlet, HeaderComponent, HomeComponent, NavbarComponent, AboutComponent, CareerComponent, ContactComponent, ServicesComponent, FooterComponent,PortfolioComponent],
   templateUrl: "./app.component.html",
   styleUrl: "./app.component.scss",
 })
