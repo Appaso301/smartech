@@ -7,10 +7,11 @@ import { AboutComponent } from "./about/about.component";
 import { CareerComponent } from "./career/career.component";
 import { ContactComponent } from "./contact/contact.component";
 import { ServicesComponent } from "./services/services.component";
+import { FooterComponent } from "./footer/footer.component";
 
 @Component({
   selector: "app-root",
-  imports: [RouterOutlet, HeaderComponent, HomeComponent, NavbarComponent, AboutComponent, CareerComponent, ContactComponent, ServicesComponent],
+  imports: [RouterOutlet, HeaderComponent, HomeComponent, NavbarComponent, AboutComponent, CareerComponent, ContactComponent, ServicesComponent, FooterComponent],
   templateUrl: "./app.component.html",
   styleUrl: "./app.component.scss",
 })
