@@ -1,5 +1,6 @@
+
 /* === Base Reset === */
-* {
+* { 
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -15,6 +16,7 @@ body {
 .career-section {
   padding: 3rem 1rem;
   text-align: center;
+  background-color: #f9eaea;
 }
 
 /* === Title Badge === */
@@ -29,6 +31,7 @@ body {
   border-radius: 50px;
   color: #ffcc00;
   margin-bottom: 1rem;
+  border: 2px solid #000000;
 }
 
 /* === Section Heading === */
@@ -76,16 +79,18 @@ body {
   left: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle at top left, #fffbe6, transparent 70%);
+  background: radial-gradient(circle at top left, #f90202, transparent 70%);
   z-index: 0;
   opacity: 0.3;
 }
 
 .role:hover {
   transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 0 20px rgba(255, 204, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 20px rgba(6, 5, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.1);
   border-color: #ffd70066;
   cursor: pointer;
+  border:1px #000000 solid;
+  border-radius: 50px;
 }
 
 .role h3 {
@@ -110,6 +115,43 @@ body {
   border-radius: 12px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
 }
+
+.form-section:hover {
+  border: 1px solid #000000;
+  background: 
+    radial-gradient(circle at 0% 0%, rgba(247, 247, 223, 0.7) 15%, transparent 70%),
+    radial-gradient(circle at 100% 100%, rgba(250, 213, 202, 0.7) 15%, transparent 70%);
+  background-size: 200% 200%;
+  background-position: 0% 0%, 100% 100%;
+  animation: blendChase 6s ease-in-out infinite;
+  box-shadow: 0 0 20px rgba(2, 2, 0, 0.3), 0 8px 24px rgba(247, 183, 183, 0.1);
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+
+
+@keyframes blendChase {
+  0% {
+    background-position: 0% 0%, 100% 100%;
+  }
+  25% {
+    background-position: 25% 25%, 75% 75%;
+  }
+  50% {
+    background-position: 50% 50%, 50% 50%;
+  }
+  75% {
+    background-position: 75% 75%, 25% 25%;
+  }
+  100% {
+    background-position: 100% 100%, 0% 0%;
+  }
+}
+
+
+
+
 
 .form-section h2 {
   color: #1e2e4a;
@@ -157,10 +199,14 @@ form button {
   border-radius: 6px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  border-radius: 30px;
+
 }
 
 form button:hover {
-  background-color: #e6b800;
+  background-color: #f9bda9;
+  border: 0.1px #000000 solid;
+  color: #000;
 }
 
 /* === Responsive Design === */
@@ -202,4 +248,20 @@ form button:hover {
     font-size: 0.9rem;
     padding: 0.6rem 1rem;
   }
+}
+
+.input-hover {
+  border: none;
+  transition: 0.3s ease; 
+}
+
+.input-hover:hover {
+  border: 0.1px solid #000;
+  border-radius: 30px;
+}
+
+.company-name {
+  font-size: 1.5em; 
+  font-weight: bold;
+  color: #000; 
 }

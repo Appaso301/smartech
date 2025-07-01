@@ -6,8 +6,18 @@
 
 html,
 body {
+  
+  scroll-behavior: smooth;
   margin: 0;
-  padding: 0;
+  padding-top: 120px;
   overflow-x: hidden;
 }
+
+[id] {
+  scroll-margin-top: 150px;
+}
+
+
+
+
 

@@ -19,6 +19,11 @@
     </div>
   </div>
 
+  <div [class.hide-all]="currentPopupId !== null">
+  <!-- header, navbar, portfolio content -->
+</div>
+
+
   <!-- this is the popup code-->
   <div class="popup" *ngIf="currentPopupId !== null" (click)="closePopup()">
     <div class="popup-content" (click)="$event.stopPropagation()">
