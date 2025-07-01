@@ -48,15 +48,17 @@
 }
 
 .footer-column ul li a:hover {
-  color: #007bff;
+  color: #f7b5a2;
+  
 }
 
 .social-icons a {
   display: inline-block;
   margin-right: 38px;
-  background-color: #007bff;
+  background-color: #f3beb7;
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 10px;
+  border:1.2px #000 solid;
 }
 
 .social-icons img {
