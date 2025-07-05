@@ -1,47 +1,38 @@
-
-/* === Base Reset === */
-* { 
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f0f4f8;
-  color: #333;
-}
-
-/* === Career Section Container === */
+/* === CAREER SECTION STYLED LIKE SERVICE PAGE === */
 .career-section {
   padding: 3rem 1rem;
+  background-color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
   text-align: center;
-  background-color: #f9eaea;
 }
 
-/* === Title Badge === */
-.title {
+/* Title badge like Services section */
+.career-section .title {
   font-size: 13px;
   letter-spacing: 1px;
   font-weight: 800;
   padding: 8px 20px;
-  background: white;
+  background: linear-gradient(to bottom, #e7f1fd, #f5faff);
   display: inline-block;
   text-transform: uppercase;
   border-radius: 50px;
   color: #ffcc00;
   margin-bottom: 1rem;
-  border: 2px solid #000000;
 }
 
-/* === Section Heading === */
+/* Heading like Services */
 .career-section h1 {
   font-size: 36px;
   color: #ffcc00;
   margin-bottom: 1.5rem;
 }
 
-/* === Description Paragraph === */
+.career-section h1 span {
+  color: #333;
+}
+
+/* Company paragraph */
 .career-section p {
   font-size: 1rem;
   line-height: 1.6;
@@ -50,47 +41,38 @@ body {
   color: #444;
 }
 
-/* === Role Cards Section === */
+/* === Roles Styled Like Services Boxes === */
 .roles {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
   gap: 2rem;
-  margin-bottom: 3rem;
+  justify-content: center;
+  margin-top: 2rem;
 }
 
 .role {
-  background-color: white;
+  background: linear-gradient(to bottom, #e7f1fd, #f5faff);
   border-radius: 16px;
-  padding: 1.5rem;
-  width: 300px;
+  padding: 2rem 1.5rem;
+  min-width: 260px;
+  max-width: 25%;
+  justify-content: space-between;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   border: 1px solid #e0e0e0;
-  text-align: left;
   position: relative;
-  overflow: hidden;
-}
-
-.role::before {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle at top left, #f90202, transparent 70%);
-  z-index: 0;
-  opacity: 0.3;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .role:hover {
   transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 0 20px rgba(6, 5, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 20px rgba(255, 204, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.1);
   border-color: #ffd70066;
+  border-radius: 20px;
   cursor: pointer;
-  border:1px #000000 solid;
-  border-radius: 50px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
 }
 
 .role h3 {
@@ -102,35 +84,37 @@ body {
 .role p {
   font-size: 0.95rem;
   color: #555;
+  line-height: 1.6;
 }
 
 /* === Form Section === */
 .form-section {
-  margin-top: 2rem;
+  margin-top: 3rem;
   background-color: #fff;
   padding: 2rem;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
-  border-radius: 12px;
+  border-radius: 16px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  background: linear-gradient(to bottom, #e7f1fd, #f5faff);
 }
 
 .form-section:hover {
-  border: 1px solid #000000;
-  background: 
-    radial-gradient(circle at 0% 0%, rgba(247, 247, 223, 0.7) 15%, transparent 70%),
-    radial-gradient(circle at 100% 100%, rgba(250, 213, 202, 0.7) 15%, transparent 70%);
-  background-size: 200% 200%;
-  background-position: 0% 0%, 100% 100%;
-  animation: blendChase 6s ease-in-out infinite;
-  box-shadow: 0 0 20px rgba(2, 2, 0, 0.3), 0 8px 24px rgba(247, 183, 183, 0.1);
-  border-radius: 50px;
-  transition: all 0.3s ease;
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 0 20px rgba(255, 204, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.1);
+  border-color: #ffd70066;
+  border-radius: 20px;
+  cursor: pointer;
+
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
 }
 
-
-
+/* Form Animation */
 @keyframes blendChase {
   0% {
     background-position: 0% 0%, 100% 100%;
@@ -149,13 +133,10 @@ body {
   }
 }
 
-
-
-
-
 .form-section h2 {
   color: #1e2e4a;
   margin-bottom: 1rem;
+  font-size: 1.5rem;
 }
 
 .form-section a {
@@ -190,27 +171,36 @@ form textarea {
   width: 100%;
 }
 
+.input-hover {
+  transition: 0.3s ease;
+}
+
+.input-hover:hover {
+  border: 0.1px solid #000;
+  border-radius: 30px;
+}
+
+/* === Form Button (same style as service button) === */
 form button {
   background-color: #ffcc00;
   color: white;
   border: none;
   padding: 0.8rem 1.5rem;
   font-size: 1rem;
-  border-radius: 6px;
+  font-weight: 600;
+  border-radius: 30px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  border-radius: 30px;
-
 }
 
 form button:hover {
   background-color: #f9bda9;
-  border: 0.1px #000000 solid;
   color: #000;
+  border: 1px solid #000;
 }
 
-/* === Responsive Design === */
-@media (max-width: 768px) {
+/* === Responsive === */
+@media (max-width: 992px) {
   .roles {
     flex-direction: column;
     align-items: center;
@@ -220,19 +210,32 @@ form button:hover {
     font-size: 28px;
   }
 
-  .form-section {
-    padding: 1.5rem;
+  .role {
+    width: 100%;
+    max-width: 100%;
   }
 }
 
-@media (max-width: 480px) {
-  .title {
+@media (max-width: 576px) {
+  .career-section .title {
     font-size: 11px;
     padding: 6px 15px;
   }
 
   .career-section h1 {
     font-size: 24px;
+  }
+
+  .role {
+    padding: 1.5rem;
+  }
+
+  .role p {
+    font-size: 0.9rem;
+  }
+
+  .role h3 {
+    font-size: 1rem;
   }
 
   .form-section {
@@ -250,18 +253,9 @@ form button:hover {
   }
 }
 
-.input-hover {
-  border: none;
-  transition: 0.3s ease; 
-}
-
-.input-hover:hover {
-  border: 0.1px solid #000;
-  border-radius: 30px;
-}
-
+/* === Optional Utility === */
 .company-name {
-  font-size: 1.5em; 
   font-weight: bold;
-  color: #000; 
+  color: #000;
+  font-size: 1.1em;
 }

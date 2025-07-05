@@ -6,19 +6,15 @@
 
 html,
 body {
-  
   height: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .banner-card {
-  
   position: relative !important;
   width: 100%;
   height: 40rem;
   overflow: hidden;
-  
-  
 }
 
 .banner-card img {
@@ -78,8 +74,9 @@ body {
 .wcu p {
   color: white;
 }
-.wcu h2 {
+.wcu h3 {
   font-size: 28px;
+  color: #ffcc00;
 }
 
 .wcu ul {
