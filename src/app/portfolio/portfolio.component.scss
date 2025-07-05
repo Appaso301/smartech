@@ -11,14 +11,14 @@
 
 #portfolio {
   font-family: sans-serif;
-  animation: slideUpFadeIn 1.5s ;
+  animation: slideUpFadeIn 1.5s;
   text-align: center;
   padding: 60px 20px;
-  background-color: #fef5f4;
+  background: linear-gradient(to bottom, #e7f1fd, #f5faff);
 }
 
 #portfolio h5 {
-  color: #f9c6b6;
+  color: #ffcc00;
   font-size: 14px;
   text-transform: uppercase;
   display: inline-block;
@@ -28,7 +28,6 @@
   font-weight: bold;
   letter-spacing: 1px;
   margin-bottom: 10px;
-  border: 2px solid #000000;
 }
 
 #portfolio h2 {
@@ -37,9 +36,9 @@
   //color :#d5aeae;
 }
 
-.portfolio-strong{
-  font-family: 'Times New Roman', Times, serif;
-  color:#f7c4bb;
+.portfolio-strong {
+  font-family: "Times New Roman", Times, serif;
+  color: #ffcc00;
 }
 
 .portfolio-filter {
@@ -55,10 +54,14 @@
   margin: 5px 10px;
   padding: 8px 16px;
   border-radius: 20px;
-  background-color: #f9c6b6;
+  background-color: white;
   cursor: pointer;
   transition: background-color 0.3s;
   color: #120000;
+  -webkit-transition: background-color 0.3s;
+  -moz-transition: background-color 0.3s;
+  -ms-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
 }
 
 .portfolio-filter li.active,
@@ -119,7 +122,7 @@
   transition: all 0.4s ease-in-out;
   border-bottom-right-radius: 12px;
   border-top-right-radius: 20px;
-  border :0.01px #000000 solid;
+  border: 0.01px #000000 solid;
 }
 
 .portfolio-item:hover .image-title {
@@ -146,7 +149,7 @@
   max-height: 80%;
   position: relative;
   z-index: 1000;
-  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
 }
 
 .popup-content img {
@@ -182,4 +185,3 @@
   background: none;
   border: none;
 }
-
