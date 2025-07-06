@@ -1,16 +1,28 @@
-import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
-import { FormsModule, NgModel } from '@angular/forms';
-import { RouterLinkActive } from '@angular/router';
+import {
+  Component,
+  AfterViewInit,
+  OnDestroy,
+  Inject,
+  PLATFORM_ID,
+} from '@angular/core';
+import { isPlatformBrowser, CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-navbar',
-  imports: [CommonModule, RouterLinkActive],
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss',
 })
-export class NavbarComponent {
+export class NavbarComponent implements AfterViewInit, OnDestroy {
   menuOpen = false;
+  activeSection = '';
+  private observer: IntersectionObserver | null = null;
+  private isBrowser: boolean;
+
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {
+    this.isBrowser = isPlatformBrowser(platformId);
+  }
 
   toggleMenu() {
     this.menuOpen = !this.menuOpen;
@@ -18,5 +30,30 @@ export class NavbarComponent {
 
   closeMenu() {
     this.menuOpen = false;
+  }
+
+  ngAfterViewInit(): void {
+    if (!this.isBrowser) return;
+
+    const sections = document.querySelectorAll('section[id]');
+    console.log('Sections found:', sections);
+
+    this.observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            console.log('Visible section:', entry.target.id);
+            this.activeSection = entry.target.id;
+          }
+        });
+      },
+      { threshold: 0.1 } // More sensitive
+    );
+
+    sections.forEach((section) => this.observer?.observe(section));
+  }
+
+  ngOnDestroy(): void {
+    this.observer?.disconnect();
   }
 }
