@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
+import { ScrollAnimationDirective } from '../directives/scroll-animation.directive';
 
 @Component({
   selector: 'app-career',
-  imports: [],
+  standalone: true,
+  imports: [ScrollAnimationDirective],
   templateUrl: './career.component.html',
-  styleUrl: './career.component.scss'
+  styleUrl: './career.component.scss',
 })
-export class CareerComponent {
-
-}
+export class CareerComponent {}

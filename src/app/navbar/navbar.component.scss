@@ -1,8 +1,7 @@
-
 .navbar {
   position: fixed !important;
-  top: 53px;
-    left: 0;
+  top: 49px;
+  left: 0;
   width: 100%;
   z-index: 1000;
   width: 100%;
@@ -34,17 +33,6 @@
   position: relative;
   padding-bottom: 4px;
   cursor: pointer;
-}
-
-.nav-links a::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 2px;
-  left: 0;
-  bottom: 0;
-  background-color: orange;
-  transition: width 0.3s;
 }
 
 .nav-links a:hover::after {
@@ -117,4 +105,7 @@
     display: block;
   }
 }
-
+.nav-links a.con.active {
+  border-bottom: 2px solid #ffcc00;
+  color: #ffcc00;
+}

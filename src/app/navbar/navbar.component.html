@@ -1,4 +1,3 @@
-
 <div class="navbar">
   <div class="navbar-container">
     <div class="navbar-logo">
@@ -10,21 +9,47 @@
     </div>
 
     <div class="nav-links" [ngClass]="{ show: menuOpen }">
-      <a href="#home"  (click)="closeMenu()">Home</a>
-
-      <a href="#about" routerLinkActive="active" (click)="closeMenu()"
+      <a
+        class="con"
+        href="#home"
+        [class.active]="activeSection === 'home'"
+        (click)="closeMenu()"
+        >Home</a
+      >
+      <a
+        class="con"
+        href="#about"
+        [class.active]="activeSection === 'about'"
+        (click)="closeMenu()"
         >About</a
       >
-      <a href="#services" routerLinkActive="active" (click)="closeMenu()"
+      <a
+        class="con"
+        href="#services"
+        [class.active]="activeSection === 'services'"
+        (click)="closeMenu()"
         >Services</a
       >
-      <a href="#portfolio" routerLinkActive="active" (click)="closeMenu()"
+      <a
+        class="con"
+        href="#portfolio"
+        [class.active]="activeSection === 'portfolio'"
+        (click)="closeMenu()"
         >Portfolio</a
       >
-      <a href="#career" routerLinkActive="active" (click)="closeMenu()"
+
+      <a
+        class="con"
+        href="#career"
+        [class.active]="activeSection === 'career'"
+        (click)="closeMenu()"
         >Career</a
       >
-      <a href="#contact" routerLinkActive="active" (click)="closeMenu()"
+      <a
+        class="con"
+        href="#contact"
+        [class.active]="activeSection === 'contact'"
+        (click)="closeMenu()"
         >Contact</a
       >
     </div>

@@ -49,24 +49,24 @@
   border: 1px solid #e0e0e0;
   position: relative;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.service-box::before {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  z-index: 0;
-  opacity: 0.3;
+  -webkit-transition: transform 0.3s ease, box-shadow 0.3s ease;
+  -moz-transition: transform 0.3s ease, box-shadow 0.3s ease;
+  -ms-transition: transform 0.3s ease, box-shadow 0.3s ease;
+  -o-transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .service-box:hover {
-  transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 0 20px rgba(255, 204, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.1);
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 0 30px rgba(255, 204, 0, 0.6),
+    /* Brighter yellow glow */ 0 12px 32px rgba(0, 0, 0, 0.2); /* Deeper black shadow */
   border-color: #ffd70066;
+  border-radius: 20px;
   cursor: pointer;
+
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
 }
 
 .service-box .icon {
@@ -128,5 +128,30 @@
 
   .service-box .icon {
     font-size: 1.8rem;
+  }
+}
+.service-box {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 3s ease-out;
+  -webkit-transition: all 3s ease-out;
+  -moz-transition: all 3s ease-out;
+  -ms-transition: all 3s ease-out;
+  -o-transition: all 3s ease-out;
+}
+
+.service-box.visible {
+  animation: slideUp 1s ease-out forwards;
+  -webkit-animation: slideUp 1s ease-out forwards;
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

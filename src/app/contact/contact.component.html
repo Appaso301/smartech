@@ -1,31 +1,40 @@
-<div class="contact fade-up" style="animation-delay: 0s;">
-  <div class="contact-container fade-up" style="animation-delay: 0.1s;">
-    <div class="contact-header fade-up" style="animation-delay: 0.2s;">
-      <span class="contact-tag fade-up" style="animation-delay: 0.3s;">CONTACT</span>
-      <h2 class="contact-title fade-up" style="animation-delay: 0.4s;">Contact Us</h2>
+<div class="contact">
+  <div class="contact-container">
+    <div class="contact-header">
+      <span class="contact-tag">CONTACT</span>
+      <h2 class="contact-title">Contact Us</h2>
     </div>
 
-    <div class="contact-cards fade-up" style="animation-delay: 0.5s;">
-      <div class="card address-card" (click)="onAddressClick()">
+    <!-- ✅ Only these cards are animated -->
+    <div class="contact-cards">
+      <div
+        class="card address-card"
+        (click)="onAddressClick()"
+        appScrollAnimation
+      >
         <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
         <h3>Our Address</h3>
-        <p>Flat No C2 47 , Kendriya Vihar , Moshi Pradhikaran , Sector No 4 ,<br />Pune , Maharashtra - 412105 , India</p>
+        <p>
+          Flat No C2 47 , Kendriya Vihar , Moshi Pradhikaran , Sector No 4 ,<br />
+          Pune , Maharashtra - 412105 , India
+        </p>
       </div>
 
-      <div class="card">
+      <div class="card" appScrollAnimation>
         <div class="icon"><i class="fas fa-envelope"></i></div>
         <h3>Email Us</h3>
         <p>smarttechengineering.ofc&#64;gmail.com</p>
       </div>
-      
-      <div class="card">
+
+      <div class="card" appScrollAnimation>
         <div class="icon"><i class="fas fa-phone-alt flipped-icon"></i></div>
         <h3>Call Us</h3>
         <p>+91 9552530532</p>
       </div>
     </div>
 
-    <form class="contact-form fade-up" style="animation-delay: 0.6s;">
+    <!-- ✅ Only the form is animated -->
+    <form class="contact-form" appScrollAnimation>
       <div class="row">
         <input type="text" placeholder="Your Name" required />
         <input type="email" placeholder="Your Email" required />
