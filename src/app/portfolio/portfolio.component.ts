@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -9,6 +9,9 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./portfolio.component.scss']
 })
 export class PortfolioComponent {
+
+  @Output() popupStateChange = new EventEmitter<boolean>();
+
   selectedFilter = 'All';
 
   portfolioItems = [
@@ -53,11 +56,13 @@ export class PortfolioComponent {
       : this.portfolioItems.filter(item => item.category === this.selectedFilter);
   }
 
-  openPopup(id: number) {
+    openPopup(id: number) {
     this.currentPopupId = id;
+    this.popupStateChange.emit(true);
   }
 
   closePopup() {
     this.currentPopupId = null;
+    this.popupStateChange.emit(false);
   }
 }

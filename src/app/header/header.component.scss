@@ -15,6 +15,13 @@ body {
   left: 0;
   width: 100%;
   z-index: 1000;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.header.hide {
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
 }
 
 .header-container {
@@ -92,3 +99,8 @@ body {
     margin-right: 5rem;
   }
 }
+
+.hide-header-navbar {
+  display: none !important;
+}
+

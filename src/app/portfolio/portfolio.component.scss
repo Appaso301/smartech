@@ -66,8 +66,8 @@
 
 .portfolio-filter li.active,
 .portfolio-filter li:hover {
-  background-color: #d49486;
-  color: #fff;
+  background-color: #e3bb5d;
+  color: #000000;
 }
 
 .portfolio-gallery {
@@ -92,7 +92,7 @@
 }
 
 .portfolio-item:hover {
-  background-color: #e2caca;
+  background-color: #797272;
   border-radius: 40px;
   transform: scale(1.05);
 }
@@ -111,7 +111,7 @@
   right: 0;
   height: 50px;
   width: 230px;
-  background-color: rgba(245, 219, 219, 0.75);
+  background-color: rgba(255, 254, 254, 0.75);
   color: #120000;
   font-size: 14px;
   font-weight: 500;
@@ -134,14 +134,14 @@
   display: flex;
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.85);
+  background: rgb(0, 0, 0);
   justify-content: center;
   align-items: center;
   z-index: 999;
 }
 
 .popup-content {
-  background: #ebe3e3;
+  background: #434242;
   padding: 20px;
   border-radius: 10px;
   text-align: center;
@@ -163,7 +163,7 @@
   font-size: 20px;
   font-weight: bold;
   color: #130000;
-  background-color: #f7c4bb;
+  background-color: #ffffff;
   border-radius: 18px;
   height: 50px;
   width: 650px;
@@ -178,10 +178,14 @@
   position: absolute;
   top: 10px;
   right: 15px;
-  font-size: 26px;
+  font-size: 40px;
   color: #333;
   cursor: pointer;
   font-weight: bold;
   background: none;
   border: none;
+}
+
+.close-btn:hover{
+  color:#ffffff;
 }

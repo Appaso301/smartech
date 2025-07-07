@@ -78,3 +78,51 @@ body {
   width: 100%;
   box-sizing: border-box;
 }
+
+.footer-column ul li a:hover {
+  color: rgb(126, 168, 226);
+}
+
+.highlight {
+  color: #000000;
+  font-weight: bold;
+}
+
+.back-to-top {
+  background-color: #ffcc00;
+  color: black;
+  border: none;
+  padding: 10px 20px 10px 10px;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s, transform 0.3s;
+  border-radius: 45px 0px 0px 45px;
+}
+
+.back-to-top:hover {
+  background-color: #ffffff;
+  transform: scale(1.1);
+  color:#000000;
+}
+
+.bounce {
+  animation: bounceUp 1.2s infinite;
+}
+
+@keyframes bounceUp {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.button{
+  margin-left: 1329px;
+  margin-bottom: 10px;
+}
+
+

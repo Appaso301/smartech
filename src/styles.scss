@@ -8,11 +8,16 @@ html,
 body {
   scroll-behavior: smooth;
   margin: 0;
-  padding-top: 120px;
+  //padding-top: 120px;
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
 [id] {
-  scroll-margin-top: 150px;
+  scroll-margin-top: 90px;
 }
+
+.hide-header-navbar {
+  display: none !important;
+}
+
