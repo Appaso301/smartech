@@ -1,7 +1,6 @@
 
-<app-header></app-header>
-
-<app-navbar></app-navbar>
+<app-header [isPopupVisible]="isPopupVisible" [hideHeader]="!showHeader"></app-header>
+<app-navbar [isPopupVisible]="isPopupVisible" [moveUp]="!showHeader"></app-navbar>
 
 <section id="home">
 <app-home></app-home>
@@ -13,7 +12,7 @@
 <app-services></app-services>
 </section>
 <section id="portfolio">
-<app-portfolio></app-portfolio>
+<app-portfolio (popupStateChange)="isPopupVisible = $event"></app-portfolio>
 </section>
 <section id="career">
 <app-career></app-career>

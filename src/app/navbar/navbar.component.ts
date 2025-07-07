@@ -3,7 +3,7 @@ import {
   AfterViewInit,
   OnDestroy,
   Inject,
-  PLATFORM_ID,
+  PLATFORM_ID,Input,
 } from '@angular/core';
 import { isPlatformBrowser, CommonModule } from '@angular/common';
 
@@ -15,6 +15,10 @@ import { isPlatformBrowser, CommonModule } from '@angular/common';
   styleUrl: './navbar.component.scss',
 })
 export class NavbarComponent implements AfterViewInit, OnDestroy {
+    @Input() isPopupVisible = false;
+    @Input() moveUp = false;
+    
+
   menuOpen = false;
   activeSection = '';
   private observer: IntersectionObserver | null = null;
