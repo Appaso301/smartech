@@ -1,6 +1,7 @@
 import {
   ChangeDetectionStrategy,
-  Component,Input,
+  Component,
+  Input,
   ViewEncapsulation,
 } from '@angular/core';
 
@@ -14,10 +15,8 @@ import {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HeaderComponent {
-
   @Input() isPopupVisible = false;
   @Input() hideHeader = false;
-  
-  name = ' smarttechengineering.ofc@gmail.com';
+
   phone = '+91 9552530532';
 }
