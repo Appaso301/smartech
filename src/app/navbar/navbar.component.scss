@@ -52,6 +52,7 @@
   position: relative;
   padding-bottom: 4px;
   cursor: pointer;
+  font-size: 18px; /* Adjust size as needed */
 }
 
 .nav-links a:hover::after {
@@ -132,4 +133,3 @@
 .hide-header-navbar {
   display: none !important;
 }
-

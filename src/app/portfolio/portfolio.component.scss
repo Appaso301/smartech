@@ -18,7 +18,7 @@
 }
 
 #portfolio h5 {
-  color: #ffcc00;
+  color: #f5be07;
   font-size: 14px;
   text-transform: uppercase;
   display: inline-block;
@@ -38,7 +38,7 @@
 
 .portfolio-strong {
   font-family: "Times New Roman", Times, serif;
-  color: #ffcc00;
+  color: #f5be07;
 }
 
 .portfolio-filter {
@@ -66,7 +66,7 @@
 
 .portfolio-filter li.active,
 .portfolio-filter li:hover {
-  background-color: #e3bb5d;
+  background-color: #f5be07;
   color: #000000;
 }
 
@@ -186,10 +186,9 @@
   border: none;
 }
 
-.close-btn:hover{
-  color:#ffffff;
+.close-btn:hover {
+  color: #ffffff;
 }
-
 
 @media (max-width: 768px) {
   #portfolio {
@@ -250,7 +249,7 @@
     right: 12px;
     padding: 5px;
     touch-action: manipulation;
-    color:#ffffff;
+    color: #ffffff;
   }
 
   .close-btn:hover {
@@ -268,4 +267,3 @@
     font-size: 14px;
   }
 }
-
